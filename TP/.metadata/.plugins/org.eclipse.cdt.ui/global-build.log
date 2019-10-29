@@ -1,0 +1,25 @@
+12:05:39 **** Incremental Build of configuration Debug for project L476_blink ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c ..\Src\main.c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -DSTM32L476xx -DUSE_STM32L4XX_NUCLEO -IR:/LLGDB/CubeL4/Drivers/CMSIS/Device/ST/STM32L4xx/Include -IR:/LLGDB/CubeL4/Drivers/STM32L4xx_HAL_Driver/Inc -IR:/LLGDB/CubeL4/Drivers/CMSIS/Include -Os -ffunction-sections -g3 -fstack-usage -Wall -fmessage-length=0 -specs=nano.specs -o Src\main.o 
+..\Src\main.c:14:1: warning: data definition has no type or storage class
+ val=0;
+ ^~~
+..\Src\main.c:14:1: warning: type defaults to 'int' in declaration of 'val' [-Wimplicit-int]
+..\Src\main.c:15:1: warning: data definition has no type or storage class
+ cmpt=1;
+ ^~~~
+..\Src\main.c:15:1: warning: type defaults to 'int' in declaration of 'cmpt' [-Wimplicit-int]
+arm-atollic-eabi-gcc -o STM32L476RG_NUCLEO.elf Asm\startup_stm32l476xx.o Linked\stm32l4xx_ll_utils.o Src\gpio.o Src\main.o Src\system_stm32l4xx.o -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T../Asm\Debug_STM32L476RG_FLASH.ld -specs=nosys.specs -static -Wl,-Map=STM32L476RG_NUCLEO.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.0.1\ide\jre\bin\java -jar C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.0.1\Tools\arm-atollic-reports.jar sizeinfo list STM32L476RG_NUCLEO.elf 
+Generate build reports...
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+   1424	     12	   1052	   2488	    9b8	STM32L476RG_NUCLEO.elf
+Print size information done
+Generate listing file
+Output sent to: STM32L476RG_NUCLEO.list
+Generate listing file done
+Generate build reports done
+Info: Nothing to build for L476_blink
+Info: Nothing to build for L476_blink
+Info: Nothing to build for L476_blink
